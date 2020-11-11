@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include "buttons.h"
+#include "file.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
@@ -13,6 +14,9 @@ HWND button;
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow) 
 {
+	
+	File file("a","b");
+	
 	WNDCLASSW wc = {0};
 	
 	wc.hbrBackground = (HBRUSH) COLOR_WINDOW;
@@ -46,8 +50,8 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 			AddMenu(hWnd);
 			
 			CreateWindowW(L"button",L"Prev", WS_CHILD | WS_VISIBLE | BS_DEFPUSHBUTTON,10,10, 50, 30, hWnd, (HMENU) 4, GetModuleHandle(NULL), NULL);
-			CreateWindowW(L"BUTTON", L"Next", WS_CHILD | WS_VISIBLE, 180,10, 50, 30, hWnd, (HMENU) 5,NULL, NULL);
-			CreateWindowW(L"BUTTON", L"Pause/Play", WS_CHILD | WS_VISIBLE,70,10, 100, 30, hWnd, (HMENU) 6,NULL, NULL);
+			CreateWindowW(L"button", L"Next", WS_CHILD | WS_VISIBLE, 180,10, 50, 30, hWnd, (HMENU) 5,NULL, NULL);
+			CreateWindowW(L"button", L"Pause/Play", WS_CHILD | WS_VISIBLE,70,10, 100, 30, hWnd, (HMENU) 6,NULL, NULL);
 			
 			break;
 		case WM_COMMAND:
