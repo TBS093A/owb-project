@@ -21,14 +21,20 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Drawing;
 	using namespace System::Runtime::InteropServices;
 
+	typedef enum Estate_ag {
+		STOPPED = 0,
+		PAUSED,
+		PLAYING
+	} EState;
+
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 
 	public:
 		Form1(void)
 		{
-			
 			InitializeComponent();
+			MCI = new CMCI_interface("project");
 		}
 		
 
@@ -40,9 +46,21 @@ namespace CppCLRWinformsProjekt {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	protected:
 
+	// MCI interface
+	private: CMCI_interface* MCI;
+
+	// satte of the application
+	private: static EState m_State = STOPPED;
+
+	// Pick up random numbers
+	private: static Random^ random = gcnew Random();
+
+	// List of the shuffled songs
+	private: static System::Collections::Generic::List<int>^ L_Songs = gcnew System::Collections::Generic::List<int>();
+
+	//Windows Forms items
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::Button^ buttonPlay;
 	private: System::Windows::Forms::Button^ buttonPrev;
 	private: System::Windows::Forms::Button^ buttonNext;
@@ -57,9 +75,6 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::TextBox^ songNameText;
 
 	private: System::ComponentModel::IContainer^ components;
-
-	private:
-
 		
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
