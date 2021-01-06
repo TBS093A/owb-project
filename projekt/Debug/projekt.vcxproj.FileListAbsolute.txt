@@ -1,0 +1,6 @@
+C:\Users\wronek\source\repos\projekt\projekt\Debug\projekt.vcxprojAssemblyReference.cache
+C:\Users\wronek\source\repos\projekt\projekt\Debug\projekt.Form1.resources
+C:\Users\wronek\source\repos\projekt\projekt\Debug\projekt.vcxproj.GenerateResource.cache
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\Debug\projekt.vcxprojAssemblyReference.cache
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\Debug\projekt.Form1.resources
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\Debug\projekt.vcxproj.GenerateResource.cache
