@@ -1,15 +1,3 @@
 ﻿  CppCLR_WinformsProjekt.cpp
-  Form1.cpp
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(6,11): error C2337: "DllImport": nie można odnaleźć atrybutu
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(7,1): error C2059: błąd składniowy: „private”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(7,16): error C2159: określono więcej niż jedną klasę magazynu
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(8,11): error C2337: "DllImport": nie można odnaleźć atrybutu
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(9,1): error C2059: błąd składniowy: „private”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(9,16): error C2159: określono więcej niż jedną klasę magazynu
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,13): error C3861: "TEXT": identyfikatora nie odnaleziono
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,40): error C2065: "NULL": niezadeklarowany identyfikator
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,46): error C2065: "SND_FILENAME": niezadeklarowany identyfikator
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,3): error C3861: "PlaySound": identyfikatora nie odnaleziono
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(16,13): error C2065: "NULL": niezadeklarowany identyfikator
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(16,3): error C3861: "PlaySound": identyfikatora nie odnaleziono
-  Generowanie kodu...
+  AssemblyInfo.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
+  projekt.vcxproj -> G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\Debug\projekt.exe

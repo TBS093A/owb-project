@@ -144,7 +144,6 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AudioFunc.h" />
     <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>

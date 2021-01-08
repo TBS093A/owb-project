@@ -6,6 +6,9 @@ int tab[5] = { 16, 2, 77, 40, 12071 };
 std::string selected = "";
 char select[100] = "";
 
+bool isPlaying = false;
+bool isPause = false;
+
 namespace CppCLRWinformsProjekt {
 
 	using namespace System;
@@ -15,14 +18,7 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Media;
-
 	
-	typedef enum Estate_ag {
-		STOPPED = 0,
-		PAUSED,
-		PLAYING
-	} EState;
-
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 
@@ -43,10 +39,10 @@ namespace CppCLRWinformsProjekt {
 		}
 
 	// Sound for playing
-	private: static SoundPlayer generalSong;
+	private: SoundPlayer^ generalSong;
 
-	// List of the shuffled songs
-	private: static System::Collections::Generic::List<int>^ L_Songs = gcnew System::Collections::Generic::List<int>();
+	// Sound informations
+	private: 
 
 	//Windows Forms items
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
@@ -188,7 +184,6 @@ namespace CppCLRWinformsProjekt {
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(440, 186);
 			this->listBox1->TabIndex = 6;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::listBox1_SelectedIndexChanged);
 			// 
 			// textBox1
 			// 
@@ -232,31 +227,63 @@ namespace CppCLRWinformsProjekt {
 		}
 #pragma endregion
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
-		for (int x = 1; x <= 10; x++)
+		/*for (int x = 1; x <= 10; x++)
 		{
-			this->listBox1->Items->Add(x);
-		}
+			this->listBox1->Items->Add("C:\\users\\Lenovo y700\\desktop\\08_DRAGON_AGE.wav");
+		}*/
+		listBox1->Click += gcnew EventHandler(this, &Form1::listBox1_SelectedIndexChanged);
 	}
 	private: System::Void buttonPlay_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (!true)
+		if (!isPlaying && this->generalSong->IsLoadCompleted == true)
 		{
-			//mciSendString(L"open 08_DRAGON_AGE.mp3 type mpegvideo alias mp3", NULL, 0, NULL);
-			//std::cout << "file playing..." << std::endl;
-			//time_t t1 = time(0);
-			//mciSendString(L"play mp3 from 10000 to 30000 wait", NULL, 0, NULL);
-			//time_t t2 = time(0);
-			//std::cout << "Duration of the play :" << t2 - t1 << " seconds." << std::endl;
-			//isPlaying = true;
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+		else if(isPlaying) {
+			this->generalSong->Stop();
+			isPlaying = false;
 		}
 		else {
-			//mciSendString(L"close mp3", NULL, 0, NULL);
-			//isPlaying = false;
+			isPlaying = false;
 		}
 	}
 	private: System::Void buttonPrev_Click(System::Object^ sender, System::EventArgs^ e) {
+		int currentItemIndex = this->listBox1->Items->IndexOf(listBox1->SelectedItem);
+		if (currentItemIndex > 0)
+			currentItemIndex--;
+		this->listBox1->SetSelected(currentItemIndex, true);
+		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
+		if (!isPlaying)
+		{
+			this->generalSong = gcnew SoundPlayer(name);
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+		else {
+			this->generalSong->Stop();
+			this->generalSong = gcnew SoundPlayer(name);
+			this->generalSong->Play();
+			isPlaying = true;
+		}
 	}
 	private: System::Void buttonNext_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		int currentItemIndex = this->listBox1->Items->IndexOf(listBox1->SelectedItem);
+		if (currentItemIndex < this->listBox1->Items->Count - 1)
+			currentItemIndex++;
+		this->listBox1->SetSelected(currentItemIndex, true);
+		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
+		if (!isPlaying)
+		{
+			this->generalSong = gcnew SoundPlayer(name);
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+		else {
+			this->generalSong->Stop();
+			this->generalSong = gcnew SoundPlayer(name);
+			this->generalSong->Play();
+			isPlaying = true;
+		}
 	}
 	private: System::Void toolTip2_Popup(System::Object^ sender, System::Windows::Forms::PopupEventArgs^ e) {
 	}
@@ -271,16 +298,39 @@ namespace CppCLRWinformsProjekt {
 	private: System::Void toolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		
+		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
+		this->generalSong = gcnew SoundPlayer(name);
+		if (!isPlaying)
+		{
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+		else {
+			this->generalSong->Stop();
+			isPlaying = false;
+		}
 	}
 	private: System::Void openFileDialog1_FileOk(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+		
 	}
 	private: System::Void removeAllToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->listBox1->Items->Clear();
 	}
 	private: System::Void addElementToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		OpenFileDialog^ openFileDialog = gcnew OpenFileDialog();
+		openFileDialog->InitialDirectory = "C:\\";
+		openFileDialog->Filter = "wav files (*.wav)|*.wav|All files (*.*)|*.*";
+		openFileDialog->FilterIndex = 2;
+		openFileDialog->RestoreDirectory = true;
+		openFileDialog->Multiselect = true;
+		openFileDialog->ShowDialog();
+		for (int i = 0; i < openFileDialog->FileNames->Length; i++) {
+			String^ path = gcnew String(openFileDialog->FileNames[i]);
+			this->listBox1->Items->Add(path);
+		}
 	}
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+	};
 }

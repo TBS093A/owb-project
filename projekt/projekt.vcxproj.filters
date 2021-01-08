@@ -35,9 +35,6 @@
     <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="AudioFunc.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinformsProjekt.cpp">
