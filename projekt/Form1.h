@@ -226,6 +226,29 @@ namespace CppCLRWinformsProjekt {
 
 		}
 #pragma endregion
+	//################################
+	//##           utils            ##
+	//################################
+	private: System::Void ChangeSoundStartOrStop() {
+		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
+		if (!isPlaying)
+		{
+			this->generalSong = gcnew SoundPlayer(name);
+			this->textBox1->AppendText(this->generalSong->LoadTimeout.ToString());
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+		else {
+			this->generalSong->Stop();
+			this->generalSong = gcnew SoundPlayer(name);
+			this->textBox1->AppendText(this->generalSong->LoadTimeout.ToString());
+			this->generalSong->Play();
+			isPlaying = true;
+		}
+	};
+	//################################
+	//##   general  functionality   ##
+	//################################
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 		/*for (int x = 1; x <= 10; x++)
 		{
@@ -252,38 +275,14 @@ namespace CppCLRWinformsProjekt {
 		if (currentItemIndex > 0)
 			currentItemIndex--;
 		this->listBox1->SetSelected(currentItemIndex, true);
-		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
-		if (!isPlaying)
-		{
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
-		else {
-			this->generalSong->Stop();
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
+		ChangeSoundStartOrStop();
 	}
 	private: System::Void buttonNext_Click(System::Object^ sender, System::EventArgs^ e) {
 		int currentItemIndex = this->listBox1->Items->IndexOf(listBox1->SelectedItem);
 		if (currentItemIndex < this->listBox1->Items->Count - 1)
 			currentItemIndex++;
 		this->listBox1->SetSelected(currentItemIndex, true);
-		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
-		if (!isPlaying)
-		{
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
-		else {
-			this->generalSong->Stop();
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
+		ChangeSoundStartOrStop();
 	}
 	private: System::Void toolTip2_Popup(System::Object^ sender, System::Windows::Forms::PopupEventArgs^ e) {
 	}
@@ -294,23 +293,12 @@ namespace CppCLRWinformsProjekt {
 	private: System::Void progressBar1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 	private: System::Void toolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
-		if (!isPlaying)
-		{
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
-		else {
-			this->generalSong->Stop();
-			this->generalSong = gcnew SoundPlayer(name);
-			this->generalSong->Play();
-			isPlaying = true;
-		}
+		ChangeSoundStartOrStop();
 	}
 	private: System::Void openFileDialog1_FileOk(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
 		
