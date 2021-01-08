@@ -234,14 +234,16 @@ namespace CppCLRWinformsProjekt {
 		if (!isPlaying)
 		{
 			this->generalSong = gcnew SoundPlayer(name);
-			this->textBox1->AppendText(this->generalSong->LoadTimeout.ToString());
+			this->songNameText->Text = this->generalSong->LoadTimeout.ToString();
+			this->buttonPlay->Text = "stop";
 			this->generalSong->Play();
 			isPlaying = true;
 		}
 		else {
 			this->generalSong->Stop();
 			this->generalSong = gcnew SoundPlayer(name);
-			this->textBox1->AppendText(this->generalSong->LoadTimeout.ToString());
+			this->songNameText->Text = this->generalSong->LoadTimeout.ToString();
+			this->buttonPlay->Text = "stop";
 			this->generalSong->Play();
 			isPlaying = true;
 		}
@@ -260,10 +262,13 @@ namespace CppCLRWinformsProjekt {
 		if (!isPlaying && this->generalSong->IsLoadCompleted == true)
 		{
 			this->generalSong->Play();
+			this->buttonPlay->Text = "stop";
+			this->songNameText->Text = this->generalSong->LoadTimeout.ToString();
 			isPlaying = true;
 		}
 		else if(isPlaying) {
 			this->generalSong->Stop();
+			this->buttonPlay->Text = "play";
 			isPlaying = false;
 		}
 		else {
