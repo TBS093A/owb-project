@@ -299,15 +299,17 @@ namespace CppCLRWinformsProjekt {
 	}
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ name = gcnew String(this->listBox1->GetItemText(listBox1->SelectedItem));
-		this->generalSong = gcnew SoundPlayer(name);
 		if (!isPlaying)
 		{
+			this->generalSong = gcnew SoundPlayer(name);
 			this->generalSong->Play();
 			isPlaying = true;
 		}
 		else {
 			this->generalSong->Stop();
-			isPlaying = false;
+			this->generalSong = gcnew SoundPlayer(name);
+			this->generalSong->Play();
+			isPlaying = true;
 		}
 	}
 	private: System::Void openFileDialog1_FileOk(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
