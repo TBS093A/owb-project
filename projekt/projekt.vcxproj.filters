@@ -29,10 +29,13 @@
     <ClInclude Include="Form1.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="MCI_interface.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\guiddef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioFunc.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -48,9 +51,6 @@
     </ClCompile>
     <ClCompile Include="Form1.cpp">
       <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="MCI_interface.cpp">
-      <Filter>Headerdateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

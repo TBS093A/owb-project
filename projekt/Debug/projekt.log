@@ -1,43 +1,15 @@
 ﻿  CppCLR_WinformsProjekt.cpp
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(9,15): error C3646: "Open": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(9,15): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(9,44): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(10,16): error C3646: "Close": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(10,16): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(10,18): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(11,15): error C3646: "Play": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(11,15): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(11,17): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(12,16): error C3646: "Pause": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(12,16): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(12,18): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(13,17): error C3646: "Resume": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(13,17): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(13,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(14,15): error C3646: "Stop": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(14,15): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(14,17): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(15,20): error C3646: "SetVolume": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(15,20): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(15,33): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(17,24): error C3646: "GetSongLength": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(17,24): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(17,54): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(18,24): error C3646: "GetSongLength": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(18,24): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(18,43): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(19,29): error C3646: "GetCurrentPosition": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(19,29): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(19,59): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(20,29): error C3646: "GetCurrentPosition": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(20,29): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(20,48): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(21,20): error C3646: "isPlaying": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(21,20): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(21,22): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(22,15): error C3646: "Seek": nieznany specyfikator przesłonięcia
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(22,15): error C2059: błąd składniowy: „(”
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.h(22,33): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-  MCI_interface.cpp
-G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\MCI_interface.cpp(251,1): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego pliku nagłówkowego. Czy zapomniano dodać „#include "pch.h"” do źródła?
+  Form1.cpp
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(6,11): error C2337: "DllImport": nie można odnaleźć atrybutu
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(7,1): error C2059: błąd składniowy: „private”
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(7,16): error C2159: określono więcej niż jedną klasę magazynu
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(8,11): error C2337: "DllImport": nie można odnaleźć atrybutu
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(9,1): error C2059: błąd składniowy: „private”
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(9,16): error C2159: określono więcej niż jedną klasę magazynu
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,13): error C3861: "TEXT": identyfikatora nie odnaleziono
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,40): error C2065: "NULL": niezadeklarowany identyfikator
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,46): error C2065: "SND_FILENAME": niezadeklarowany identyfikator
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(13,3): error C3861: "PlaySound": identyfikatora nie odnaleziono
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(16,13): error C2065: "NULL": niezadeklarowany identyfikator
+G:\Projekty\projekty programistyczne\C & C++\owb\owb-project\projekt\AudioFunc.h(16,3): error C3861: "PlaySound": identyfikatora nie odnaleziono
   Generowanie kodu...

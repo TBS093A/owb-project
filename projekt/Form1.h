@@ -2,14 +2,9 @@
 #include <stdio.h>
 #include <string>
 
-#include "MCI_interface.h"
-
 int tab[5] = { 16, 2, 77, 40, 12071 };
 std::string selected = "";
 char select[100] = "";
-
-bool g_bShuffle = false;
-bool g_bAutosize = true;
 
 namespace CppCLRWinformsProjekt {
 
@@ -19,8 +14,9 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Runtime::InteropServices;
+	using namespace System::Media;
 
+	
 	typedef enum Estate_ag {
 		STOPPED = 0,
 		PAUSED,
@@ -34,7 +30,6 @@ namespace CppCLRWinformsProjekt {
 		Form1(void)
 		{
 			InitializeComponent();
-			MCI = new CMCI_interface("project");
 		}
 		
 
@@ -47,14 +42,8 @@ namespace CppCLRWinformsProjekt {
 			}
 		}
 
-	// MCI interface
-	private: CMCI_interface* MCI;
-
-	// satte of the application
-	private: static EState m_State = STOPPED;
-
-	// Pick up random numbers
-	private: static Random^ random = gcnew Random();
+	// Sound for playing
+	private: static SoundPlayer generalSong;
 
 	// List of the shuffled songs
 	private: static System::Collections::Generic::List<int>^ L_Songs = gcnew System::Collections::Generic::List<int>();
